@@ -16,19 +16,13 @@ int main(void) {
   LED_init();
 
 
-  while(1){
+ 
 
-    LED_toggle(LED0);
-    LED_toggle(LED1);
-    LED_toggle(LED2);
-    LED_toggle(LED3);
-
-    k_msleep(250);
-
-    LED_toggle(LED0);
-
-    k_msleep(250);
-  }
+  LED_blink(LED0,LED_1HZ);
+  LED_blink(LED1,LED_2HZ);
+  LED_blink(LED2,LED_4HZ);
+  LED_blink(LED3,LED_8HZ);
+  
 
   return 0;
 }
