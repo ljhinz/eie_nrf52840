@@ -13,17 +13,12 @@
 #define SLEEP_MS 1
 
 int main(void) {
+  LED_init();
 
-  if (0 > BTN_init()) {
-    return 0;
+  while(1){
+    LED_toggle(LED0);
+    k_msleep(500);
   }
-  if (0 > LED_init()) {
-    return 0;
-  }
-  while (1) {
-    k_msleep(SLEEP_MS);
-  }
-
 
   return 0;
 }
